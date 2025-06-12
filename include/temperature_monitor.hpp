@@ -3,18 +3,17 @@
 
 class TemperatureMonitor {
 public:
-    TemperatureMonitor(double threshold);
+    explicit TemperatureMonitor(double threshold);
 
     void update(double newTemperature);
 
-    bool isOverheating() const;
-
     double getCurrentTemperature() const;
 
+    bool isOverheating() const;
+
 private:
-    double threshold_;
-    double currentTemperature_;
-    bool overheating_;
+    double currentTemperature;
+    double threshold;
 };
 
-#endif  // TEMPERATURE_MONITOR_HPP
+#endif // TEMPERATURE_MONITOR_HPP
