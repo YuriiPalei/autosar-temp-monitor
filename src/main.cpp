@@ -1,22 +1,18 @@
 #include <iostream>
 
-#include "temperature_monitor.hpp"
+#include "../include/temperature_monitor.hpp"
 
 int main() {
   TemperatureMonitor monitor(75.0);
 
-  double inputTemp;
-  std::cout << "Enter temperature value: ";
-  std::cin >> inputTemp;
+  monitor.update(60.0);
+  monitor.update(80.0);
+  monitor.update(70.0);
 
-  monitor.update(inputTemp);
-
-  std::cout << "Current: " << monitor.getCurrentTemperature() << "°C\n";
-  if (monitor.isOverheating()) {
-    std::cout << "Warning: Overheating detected!\n";
-  } else {
-    std::cout << "Temperature is normal.\n";
-  }
+  std::cout << "Final Temperature: " << monitor.getCurrentTemperature() << "°C"
+            << std::endl;
+  std::cout << "Is Overheating: " << (monitor.isOverheating() ? "Yes" : "No")
+            << std::endl;
 
   return 0;
 }
