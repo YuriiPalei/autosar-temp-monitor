@@ -1,17 +1,16 @@
 #include "../include/temperature_monitor.hpp"
 
 TemperatureMonitor::TemperatureMonitor(double threshold)
-    : threshold(threshold), currentTemperature(0.0) {
-}
+    : threshold(threshold), currentTemperature(0.0) {}
 
 void TemperatureMonitor::update(double newTemperature) {
-    currentTemperature = newTemperature;
+  currentTemperature = newTemperature;
 }
 
 double TemperatureMonitor::getCurrentTemperature() const {
-    return currentTemperature;
+  return currentTemperature;
 }
 
 bool TemperatureMonitor::isOverheating() const {
-    return currentTemperature > threshold;
+  return currentTemperature > threshold;
 }

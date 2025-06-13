@@ -2,18 +2,18 @@
 #define TEMPERATURE_MONITOR_HPP
 
 class TemperatureMonitor {
-public:
-    explicit TemperatureMonitor(double threshold);
+ public:
+  explicit TemperatureMonitor(double threshold);
 
-    void update(double newTemperature);
+  void update(double newTemperature);
 
-    double getCurrentTemperature() const;
+  double getCurrentTemperature() const;
 
-    bool isOverheating() const;
+  bool isOverheating() const;
 
-private:
-    double currentTemperature;
-    double threshold;
+ private:
+  double currentTemperature;
+  double threshold;
 };
 
-#endif // TEMPERATURE_MONITOR_HPP
+#endif  // TEMPERATURE_MONITOR_HPP
