@@ -1,7 +1,6 @@
-set(CMAKE_CXX_STANDARD 17)
+cmake_minimum_required(VERSION 3.15)
+project(TemperatureMonitor)
 
-include_directories(include)
-file(GLOB SOURCES "src/*.cpp")
-add_executable(TemperatureMonitor ${SOURCES})
+set(CMAKE_CXX_STANDARD 17)
 
 add_subdirectory(tests)
